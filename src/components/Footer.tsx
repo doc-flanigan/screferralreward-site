@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { REFERRAL_CODE, HUB_URL } from '@/data/referral';
+import { HUB_URL } from '@/data/referral';
 
 export default function Footer() {
   return (
@@ -22,10 +22,7 @@ export default function Footer() {
             Affiliate Disclosure
           </h3>
           <p className="text-platinum/70 leading-relaxed">
-            If you create a Star Citizen account using referral code{' '}
-            <span className="font-mono text-gold">{REFERRAL_CODE}</span>, the site owner
-            (Doc_Flanigan) will receive an in-game bonus reward. You still receive your full
-            50,000 UEC bonus — your reward is not reduced.
+            Affiliate disclosure: This site uses Star Citizen referral links. Referral code owners may receive an in-game bonus if you sign up. Your rewards are not affected.
           </p>
         </div>
         <div>
