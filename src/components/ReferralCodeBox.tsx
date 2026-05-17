@@ -47,14 +47,9 @@ export default function ReferralCodeBox({ variant = 'hero' }: Props) {
           {copied ? '✓ Copied' : 'Copy'}
         </button>
       </div>
-      <a
-        href={REFERRAL_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block mt-4 text-center text-xs text-platinum/60 hover:text-gold break-all"
-      >
+      <p className="block mt-4 text-center text-xs text-platinum/60 break-all select-all">
         {REFERRAL_URL}
-      </a>
+      </p>
     </div>
   );
 }
