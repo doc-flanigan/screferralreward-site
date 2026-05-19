@@ -11,6 +11,17 @@ export default function ReferralCodeBox({ variant = 'hero' }: Props) {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
+    fetch('/api/log', {
+      method: 'POST',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        label: 'code-copy',
+        referralCode: REFERRAL_CODE,
+        page: window.location.pathname,
+        site: window.location.hostname,
+      }),
+    }).catch(() => {})
     try {
       await navigator.clipboard.writeText(REFERRAL_CODE);
       setCopied(true);
