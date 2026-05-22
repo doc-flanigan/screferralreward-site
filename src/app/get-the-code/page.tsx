@@ -5,6 +5,7 @@ import ReferralCodeBox from '@/components/ReferralCodeBox';
 import SectionHeading from '@/components/SectionHeading';
 import { REFERRAL_CODE } from '@/data/referral';
 import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
+import { DiscordCTA } from '@/components/DiscordCTA';
 
 export const metadata: Metadata = {
   title: `Star Citizen Referral Code ${REFERRAL_CODE} — 50,000 UEC`,
@@ -141,6 +142,7 @@ export default function GetTheCodePage() {
           </ul>
           <div className="mt-10 text-center">
             <CTAButton />
+            <DiscordCTA />
           </div>
         </div>
       </section>
