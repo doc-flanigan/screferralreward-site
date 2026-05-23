@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { HUB_URL } from '@/data/referral';
 
 export default function Footer() {
   return (
@@ -22,7 +21,7 @@ export default function Footer() {
             Affiliate Disclosure
           </h3>
           <p className="text-platinum/70 leading-relaxed">
-            Affiliate disclosure: This site uses Star Citizen referral links. Referral code owners may receive an in-game bonus if you sign up. Your rewards are not affected.
+            Affiliate disclosure: This site uses Star Citizen referral code STAR-GCQJ-N6NC. Referral code owners may receive an in-game bonus if you sign up. Your rewards are not affected.
           </p>
         </div>
         <div>
@@ -39,11 +38,7 @@ export default function Footer() {
             />
           </div>
           <p className="mt-4 text-platinum/50 text-xs">
-            Part of the{' '}
-            <a href={HUB_URL} className="text-gold hover:underline">
-              dayonecitizen.com
-            </a>{' '}
-            fan-site network.
+            Part of the dayonecitizen.com fan-site network.
           </p>
         </div>
       </div>

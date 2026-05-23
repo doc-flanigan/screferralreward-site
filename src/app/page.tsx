@@ -70,7 +70,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="How It Works"
             title="Three Steps. Five Minutes. 50,000 UEC."
-            subtitle="The referral bonus is automatic — no support tickets, no waiting periods. Apply the code at signup and the credits land after your first qualifying purchase."
+            subtitle="The referral bonus is automatic — no support tickets, no waiting periods. Apply the code at signup and the credits land automatically when your account is created."
           />
           <HowItWorks />
           {/* SEO cross-link: dayonecitizen */}
@@ -187,8 +187,8 @@ export default function Home() {
           </h2>
           <p className="text-platinum/70">
             Code <span className="font-mono text-gold">STAR-GCQJ-N6NC</span> works on any new
-            RSI account. Apply at signup and the credits land after your first qualifying
-            purchase.
+            RSI account. Apply at signup and the credits land automatically when you
+            register.
           </p>
           <ReferralCodeBox />
           <CTAButton trackingLabel="homepage-cta" />

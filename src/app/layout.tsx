@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   description:
     'Use a Star Citizen referral code when you sign up to get 50,000 free UEC. Code: STAR-GCQJ-N6NC. Updated for 2026.',
-  metadataBase: new URL('https://screferralreward.com'),
+  metadataBase: new URL('https://www.screferralreward.com'),
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
