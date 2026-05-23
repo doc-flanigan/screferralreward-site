@@ -40,7 +40,7 @@ export const REFERRAL_EVENTS: ReferralEvent[] = [
     reward: '50,000 UEC + free-fly access (expected)',
     status: ‘live’,
     note: "Based on RSI’s historical Invictus cadence. Expect a free-fly window paired with the standard 50,000 UEC referral bonus; any extra recruit-side perks (themed gear pack, loaner ship) will be announced via RSI Comm-Link closer to the event.",
-    source: 'https://robertsspaceindustries.com/en/comm-link?text=Referral+Bonus'
+    source: 'https://robertsspaceindustries.com/en/referral-program'
   }
 ];
 
