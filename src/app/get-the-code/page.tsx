@@ -141,7 +141,7 @@ export default function GetTheCodePage() {
             </li>
           </ul>
           <div className="mt-10 text-center">
-            <CTAButton />
+            <CTAButton trackingLabel="get-code-cta" />
             <DiscordCTA />
           </div>
         </div>

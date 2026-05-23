@@ -44,7 +44,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-            <CTAButton label="Create Account & Claim Bonus" />
+            <CTAButton label="Create Account & Claim Bonus" trackingLabel="homepage-cta" />
           </div>
 
           <div className="mx-auto max-w-md mt-2 rounded-md border border-yellow-400/40 bg-yellow-400/5 px-4 py-3 text-sm text-yellow-200/90 flex items-start gap-2">
@@ -142,7 +142,7 @@ export default function Home() {
               Edit <code className="font-mono text-platinum/60">src/data/events.ts</code> to
               keep this section current.
             </p>
-            <CTAButton size="md" label="Claim Bonus Now →" />
+            <CTAButton size="md" label="Claim Bonus Now →" trackingLabel="homepage-cta" />
           </div>
         </section>
       )}
@@ -191,7 +191,7 @@ export default function Home() {
             purchase.
           </p>
           <ReferralCodeBox />
-          <CTAButton />
+          <CTAButton trackingLabel="homepage-cta" />
         </div>
       </section>
     </main>

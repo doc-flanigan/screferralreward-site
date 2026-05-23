@@ -42,7 +42,7 @@ export default function CTAButton({
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer sponsored"
       className={`inline-flex items-center justify-center gap-2 rounded-md font-bold tracking-wide bg-gold text-charcoal hover:bg-goldDark transition-all hover:translate-y-[-1px] hover:shadow-gold ${sizing} ${className}`}
       onClick={handleClick}
     >

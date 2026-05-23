@@ -87,7 +87,7 @@ export default function EventTrackerPage() {
             Even outside event windows, the 50,000 UEC referral bonus is permanent. Use code{' '}
             <span className="font-mono text-gold">STAR-GCQJ-N6NC</span> any time.
           </p>
-          <CTAButton />
+          <CTAButton trackingLabel="event-tracker-cta" />
           <div>
             <Link href="/" className="text-sm text-platinum/60 hover:text-gold">
               ← Back to home
