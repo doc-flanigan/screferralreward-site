@@ -37,7 +37,7 @@ export default function ReferralCodeBox({ variant = 'hero' }: Props) {
     <div
       className={`mx-auto w-full ${isHero ? 'max-w-xl' : 'max-w-md'} bg-charcoalMid border-2 border-gold rounded-lg p-5 sm:p-6 shadow-gold`}
     >
-      <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold mb-3 text-center">
+      <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3 text-center">
         Your Referral Code
       </p>
       <div className="flex flex-col sm:flex-row items-stretch gap-3">

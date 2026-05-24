@@ -43,7 +43,7 @@ export default function EventHistoryTable() {
               <td className="px-4 py-3 align-top text-gold">{e.reward}</td>
               <td className="px-4 py-3 align-top">
                 <span
-                  className={`inline-block text-[10px] uppercase tracking-widest px-2 py-1 rounded border ${STATUS_CHIP[e.status]}`}
+                  className={`inline-block text-xs uppercase tracking-widest px-2 py-1 rounded border ${STATUS_CHIP[e.status]}`}
                 >
                   {e.status}
                 </span>
