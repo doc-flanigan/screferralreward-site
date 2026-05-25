@@ -3,6 +3,8 @@ import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="flex-1">{children}</div>
         <Footer />
         <Analytics />
+        <GoogleAnalytics />
+        <CookieBanner />
       </body>
     </html>
   );
