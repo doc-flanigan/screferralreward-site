@@ -1,0 +1,22 @@
+# screferralreward.com
+
+> Plain-English guide to the Star Citizen referral program for new players. Explains how to use a referral code at RSI account signup to claim a 50,000 UEC bonus, walks through the exact signup steps, and tracks past and upcoming referral bonus windows. Unofficial fan site — not affiliated with or endorsed by Cloud Imperium Games or Roberts Space Industries.
+
+## Pages
+
+- [Star Citizen Referral Code 2026](https://screferralreward.com/): Overview of how the referral bonus works and the code to use at signup for 50,000 free UEC.
+- [Get the Code](https://screferralreward.com/get-the-code): Step-by-step walkthrough for applying the referral code during RSI signup to receive the 50,000 UEC bonus.
+- [Referral Bonus Event Tracker](https://screferralreward.com/event-tracker): History of past referral bonus windows and a reference for estimating upcoming high-bonus events.
+
+## Key facts
+
+- New Star Citizen players receive a 50,000 UEC bonus when a valid referral code is entered during RSI account signup.
+- The referral code featured on this site is STAR-GCQJ-N6NC.
+- UEC (United Earth Credits) is in-game currency used for components, weapons, gear, and consumables — enough to outfit a starter ship and personal loadout.
+- The referral bonus is applied automatically at account creation; the code must be entered at signup and the account completed within 24 hours.
+- RSI periodically runs anniversary, IAE, and Invictus bonus windows that can stack on top of the standard referral reward.
+
+## Related
+
+- [dayonecitizen.com](https://dayonecitizen.com): Plain-English getting-started guide for brand-new Star Citizen players.
+- [freeflyevent.com](https://freeflyevent.com): Tracker for Star Citizen Free Fly events, when anyone can try the game for free.
