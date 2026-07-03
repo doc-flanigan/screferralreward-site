@@ -122,9 +122,9 @@ muted         #6b7280
 - Vercel project: `screferralrewards-site` (team `scottgayden-5755s-projects`)
 - GitHub: `doc-flanigan/screferralrewards-site`
 - Auto-deploy on push to `main`
-- Production domains in Vercel: `www.screferralreward.com` ✅,
-  apex `screferralreward.com` pending (DNS already delegated to Vercel via
-  GoDaddy nameservers `ns1.vercel-dns.com` / `ns2.vercel-dns.com`).
+- Production domains in Vercel: apex `screferralreward.com` is primary;
+  `www.screferralreward.com` 301-redirects to it. Canonical URLs, sitemap,
+  and JSON-LD must all use the apex (`SITE_URL` in `src/data/referral.ts`).
 
 ## Network Conventions
 
