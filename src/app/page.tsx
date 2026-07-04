@@ -11,6 +11,7 @@ import SectionHeading from '@/components/SectionHeading';
 import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
 import FaqJsonLd from '@/components/FaqJsonLd';
 import OrgJsonLd from '@/components/OrgJsonLd';
+import { PageSources } from '@/components/PageSources';
 import { REFERRAL_EVENTS } from '@/data/events';
 
 export default function Home() {
@@ -194,6 +195,8 @@ export default function Home() {
           <CTAButton trackingLabel="homepage-cta" />
         </div>
       </section>
+
+      <PageSources route="/" />
     </main>
   );
 }

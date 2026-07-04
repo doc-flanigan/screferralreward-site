@@ -5,6 +5,7 @@ import CountdownTimer from '@/components/CountdownTimer';
 import EventHistoryTable from '@/components/EventHistoryTable';
 import SectionHeading from '@/components/SectionHeading';
 import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
+import { PageSources } from '@/components/PageSources';
 import { HUB_URL } from '@/data/referral';
 
 export const metadata: Metadata = {
@@ -95,6 +96,8 @@ export default function EventTrackerPage() {
           </div>
         </div>
       </section>
+
+      <PageSources route="/event-tracker" />
     </main>
   );
 }

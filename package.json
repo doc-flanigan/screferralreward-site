@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "indexnow": "node scripts/indexnow.mjs",
-    "postbuild": "node scripts/indexnow.mjs || true"
+    "postbuild": "node scripts/indexnow.mjs || true",
+    "gen-sources": "node ../docs/claims/gen-sources.mjs screferralreward.com src/data/page-sources.generated.json"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
