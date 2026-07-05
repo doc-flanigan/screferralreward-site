@@ -5,7 +5,7 @@ export const HUB_URL = 'https://dayonecitizen.com';
 export const SITE_URL = 'https://screferralreward.com';
 
 export const HERO_IMAGES: { src: string; alt: string }[] = Array.from(
-  { length: 12 },
+  { length: 18 },
   (_, i) => {
     const num = String(i + 1).padStart(2, '0');
     return {

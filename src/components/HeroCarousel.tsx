@@ -10,8 +10,10 @@ type Props = {
   className?: string;
 };
 
+const START = 15;
+
 export default function HeroCarousel({ intervalMs = 5000, className = '' }: Props) {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(START);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export default function HeroCarousel({ intervalMs = 5000, className = '' }: Prop
             src={current.src}
             alt={current.alt}
             fill
-            priority={index === 0}
+            priority={index === START}
             sizes="(max-width: 768px) 100vw, 1024px"
             className="object-cover"
           />
