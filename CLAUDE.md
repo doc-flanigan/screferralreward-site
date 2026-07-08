@@ -131,6 +131,17 @@ muted         #6b7280
 See `E:\Claude Code\sc-portfolio\SHARED_CONVENTIONS.md` for footer spec,
 tone rules, commit convention, and tech stack.
 
+## Maintenance contract (passive site)
+
+Polished 2026-07-07 as a set-and-forget passive funnel (static heroes replaced
+the broken carousel; all three pages have FAQPage JSON-LD + ledger-driven
+PageSources; the real annotated RSI signup screenshot lives on /get-the-code;
+the defunct newsletter promise on /event-tracker was replaced with a
+freeflyevent.com pointer). **The only recurring maintenance is the year in
+titles/copy ("2026") — refresh each January** and, optionally, new rows in
+`src/data/events.ts` when a referral bonus event is officially announced.
+Don't add content that can rot.
+
 ## Things explicitly out of scope
 
 - Promoting any other referral code, randomizer, or aggregator.
