@@ -3,7 +3,6 @@ export type ReferralEvent = {
   startDate: string; // ISO
   endDate: string; // ISO
   reward: string; // What the new player (recruit) receives
-  expected?: boolean; // true = cadence-based prediction, not yet announced by RSI
   note?: string;
   source?: string;
 };
@@ -54,15 +53,6 @@ export const REFERRAL_EVENTS: ReferralEvent[] = [
     source:
       'https://robertsspaceindustries.com/en/comm-link/transmission/21147-DefenseCon-2956-About'
   },
-  {
-    name: 'IAE 2956 — Expected',
-    startDate: '2026-11-19',
-    endDate: '2026-12-02',
-    reward: '50,000 UEC + free-fly access (expected)',
-    expected: true,
-    note: "Not yet announced — dates are an estimate based on the IAE's annual late-November cadence. Expect a free-fly window paired with the standard 50,000 UEC referral bonus; any extra recruit-side perks will be announced via RSI Comm-Link closer to the event.",
-    source: 'https://robertsspaceindustries.com/en/referral-program'
-  }
 ];
 
 // Standard new-recruit bonus — always available outside event windows.

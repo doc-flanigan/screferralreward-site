@@ -35,12 +35,15 @@ Conventions:    E:\Claude Code\sc-portfolio\SHARED_CONVENTIONS.md
 
 ```
 /                  Homepage. Above-fold ReferralCodeBox + 24h-rule warning.
-                   Sections: How It Works, Countdown, UEC Spend Grid, current
-                   event card, Event History preview, FAQ (8 q's), final CTA.
+                   Sections: How It Works, Events & Free Fly pointer, UEC
+                   Spend Grid, FAQ (8 q's), final CTA.
 
-/get-the-code      Five-step signup walkthrough. Screenshot placeholders.
+/get-the-code      Five-step signup walkthrough with the real annotated RSI
+                   signup screenshot.
 
-/event-tracker     Countdown timer + full event history table.
+/event-tracker     REMOVED 2026-07-08 — 301s to https://freeflyevent.com.
+                   Event tracking is freeflyevent.com's job; this passive
+                   site carries NO future dates anywhere (they rot).
 
 /sitemap.xml       Auto-generated from src/app/sitemap.ts
 /robots.txt        Auto-generated from src/app/robots.ts
@@ -133,14 +136,16 @@ tone rules, commit convention, and tech stack.
 
 ## Maintenance contract (passive site)
 
-Polished 2026-07-07 as a set-and-forget passive funnel (static heroes replaced
-the broken carousel; all three pages have FAQPage JSON-LD + ledger-driven
-PageSources; the real annotated RSI signup screenshot lives on /get-the-code;
-the defunct newsletter promise on /event-tracker was replaced with a
-freeflyevent.com pointer). **The only recurring maintenance is the year in
-titles/copy ("2026") — refresh each January** and, optionally, new rows in
-`src/data/events.ts` when a referral bonus event is officially announced.
-Don't add content that can rot.
+Polished 2026-07-07/08 as a set-and-forget passive funnel (static heroes
+replaced the broken carousel; both pages have FAQPage JSON-LD + ledger-driven
+PageSources; the real annotated RSI signup screenshot lives on /get-the-code).
+The event tracker was REMOVED entirely on 2026-07-08 after its hardcoded
+event data went stale — /event-tracker 301s to freeflyevent.com, and this
+site now contains **no future dates anywhere**. `src/data/events.ts` remains
+only as an unused historical record. **The only recurring maintenance is the
+year in titles/copy ("2026") — refresh each January.** Don't add content
+that can rot: no future dates, no countdowns, no "current event" cards, no
+event promises.
 
 ## Things explicitly out of scope
 

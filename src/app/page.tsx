@@ -1,28 +1,16 @@
-import Link from 'next/link';
 import CTAButton from '@/components/CTAButton';
 import ReferralCodeBox from '@/components/ReferralCodeBox';
 import StaticHero from '@/components/StaticHero';
-import CountdownTimer from '@/components/CountdownTimer';
 import HowItWorks from '@/components/HowItWorks';
 import UecSpendGrid from '@/components/UecSpendGrid';
-import EventHistoryTable from '@/components/EventHistoryTable';
 import FaqAccordion from '@/components/FaqAccordion';
 import SectionHeading from '@/components/SectionHeading';
 import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
 import FaqJsonLd from '@/components/FaqJsonLd';
 import OrgJsonLd from '@/components/OrgJsonLd';
 import { PageSources } from '@/components/PageSources';
-import { REFERRAL_EVENTS, getEventStatus } from '@/data/events';
-
-// Re-render daily so date-derived event statuses stay current on this
-// otherwise-static page without needing a deploy.
-export const revalidate = 86400;
 
 export default function Home() {
-  const currentEvent =
-    REFERRAL_EVENTS.find((e) => getEventStatus(e) === 'live') ??
-    REFERRAL_EVENTS.find((e) => getEventStatus(e) === 'upcoming');
-  const currentEventStatus = currentEvent ? getEventStatus(currentEvent) : null;
 
   return (
     <main>
@@ -98,26 +86,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COUNTDOWN TIMER */}
+      {/* EVENTS POINTER */}
       <section className="px-4 sm:px-6 py-16 bg-charcoalMid/40 border-y border-white/5">
         <div className="max-w-3xl mx-auto">
           <SectionHeading
-            eyebrow="Bonus Event Tracker"
-            title="Time Your Signup For Maximum UEC"
-            subtitle="Anniversary, IAE, Invictus — RSI runs periodic bonus windows that stack on top of the standard referral reward. Standard bonus is always available."
+            eyebrow="Events & Free Fly"
+            title="The Bonus Never Expires. Events Just Add Extras."
+            subtitle="The 50,000 UEC referral bonus is available year-round. A few times a year, RSI events layer extra perks and free-trial windows on top."
           />
-          <CountdownTimer />
-          <p className="text-sm text-muted mt-3 text-center">
-            Not ready to buy yet?{' '}
+          <p className="text-center text-platinum/75">
+            Want to try the game free first, or see what event is running?{' '}
             <a
               href="https://freeflyevent.com"
               className="text-gold underline hover:text-goldDark"
               target="_blank"
               rel="noopener"
             >
-              Check if there&apos;s a Free Fly event
+              freeflyevent.com
             </a>{' '}
-            — you can try Star Citizen before you commit.
+            tracks Free Fly windows and event dates day by day.
           </p>
         </div>
       </section>
@@ -131,47 +118,6 @@ export default function Home() {
             subtitle="UEC is the in-game currency for components, weapons, gear, and consumables. 50,000 UEC is enough to outfit a starter ship and a full personal loadout."
           />
           <UecSpendGrid />
-        </div>
-      </section>
-
-      {/* CURRENT EVENT */}
-      {currentEvent && (
-        <section className="px-4 sm:px-6 py-12">
-          <div className="max-w-3xl mx-auto bg-charcoalMid border border-gold/30 rounded-xl p-6 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">
-              {currentEventStatus === 'live'
-                ? 'Active Now'
-                : currentEvent.expected
-                  ? 'Expected Next'
-                  : 'Upcoming'}
-            </p>
-            <h3 className="font-display text-2xl text-platinum mb-2">{currentEvent.name}</h3>
-            <p className="text-gold mb-3">{currentEvent.reward}</p>
-            {currentEvent.note && (
-              <p className="text-sm text-platinum/65 mb-5">{currentEvent.note}</p>
-            )}
-            <CTAButton size="md" label="Claim Bonus Now →" trackingLabel="homepage-cta" />
-          </div>
-        </section>
-      )}
-
-      {/* EVENT HISTORY */}
-      <section className="px-4 sm:px-6 py-16">
-        <div className="max-w-5xl mx-auto">
-          <SectionHeading
-            eyebrow="Event History"
-            title="Past & Upcoming Bonus Windows"
-            subtitle="A reference of recent referral bonus events. Use this to estimate when the next high-bonus window is likely."
-          />
-          <EventHistoryTable />
-          <div className="text-center mt-8">
-            <Link
-              href="/event-tracker"
-              className="inline-block text-sm text-gold hover:underline"
-            >
-              Open the full event tracker →
-            </Link>
-          </div>
         </div>
       </section>
 

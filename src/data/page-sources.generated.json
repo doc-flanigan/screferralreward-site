@@ -28,33 +28,6 @@
         ]
       }
     ],
-    "/event-tracker": [
-      {
-        "id": "event-defensecon-2956",
-        "claim": "DefenseCon 2956 ran as a Free Fly event 14–27 May 2026 (UTC).",
-        "status": "verified",
-        "sources": [
-          "https://robertsspaceindustries.com/en/comm-link/transmission/21147-DefenseCon-2956-About"
-        ]
-      },
-      {
-        "id": "freefly-event-based-not-always-on",
-        "claim": "Free Fly access is event-based, not always-on — CIG runs scheduled windows a few times per year (typically Invictus/DefenseCon in May and IAE in November); outside an event, playing requires a Game Package.",
-        "status": "verified",
-        "sources": [
-          "https://robertsspaceindustries.com/en/comm-link/transmission/21147-DefenseCon-2956-About",
-          "https://robertsspaceindustries.com/en/comm-link/transmission/20861-Intergalactic-Aerospace-Expo-2955-Free-Fly-And-Manufacturer-Schedule"
-        ]
-      },
-      {
-        "id": "referral-enlistment-bonus-50k-uec",
-        "claim": "New RSI accounts created with a referral code receive a 50,000 UEC enlistment bonus.",
-        "status": "verified",
-        "sources": [
-          "https://robertsspaceindustries.com/en/referral-program"
-        ]
-      }
-    ],
     "/get-the-code": [
       {
         "id": "referral-bonus-no-purchase-required",
