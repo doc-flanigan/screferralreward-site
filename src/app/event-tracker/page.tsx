@@ -40,6 +40,9 @@ const faqJsonLd = {
   ]
 };
 
+// Re-render daily so date-derived event statuses stay current without a deploy.
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: 'Star Citizen Referral Bonus Events — History & Upcoming',
   description:

@@ -5,8 +5,9 @@ import { REFERRAL_EVENTS, STANDARD_BONUS } from '@/data/events';
 
 function pickNextEvent() {
   const now = Date.now();
+  // Date-derived only — an event is relevant while its window hasn't ended.
   const upcoming = REFERRAL_EVENTS
-    .filter((e) => e.status === 'upcoming' || new Date(e.endDate).getTime() > now)
+    .filter((e) => new Date(e.endDate).getTime() > now)
     .sort(
       (a, b) =>
         new Date(a.startDate).getTime() - new Date(b.startDate).getTime()

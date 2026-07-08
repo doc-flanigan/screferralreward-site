@@ -12,12 +12,17 @@ import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
 import FaqJsonLd from '@/components/FaqJsonLd';
 import OrgJsonLd from '@/components/OrgJsonLd';
 import { PageSources } from '@/components/PageSources';
-import { REFERRAL_EVENTS } from '@/data/events';
+import { REFERRAL_EVENTS, getEventStatus } from '@/data/events';
+
+// Re-render daily so date-derived event statuses stay current on this
+// otherwise-static page without needing a deploy.
+export const revalidate = 86400;
 
 export default function Home() {
   const currentEvent =
-    REFERRAL_EVENTS.find((e) => e.status === 'live') ??
-    REFERRAL_EVENTS.find((e) => e.status === 'upcoming');
+    REFERRAL_EVENTS.find((e) => getEventStatus(e) === 'live') ??
+    REFERRAL_EVENTS.find((e) => getEventStatus(e) === 'upcoming');
+  const currentEventStatus = currentEvent ? getEventStatus(currentEvent) : null;
 
   return (
     <main>
@@ -134,18 +139,17 @@ export default function Home() {
         <section className="px-4 sm:px-6 py-12">
           <div className="max-w-3xl mx-auto bg-charcoalMid border border-gold/30 rounded-xl p-6 sm:p-8">
             <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">
-              {currentEvent.status === 'live' ? 'Active Now' : 'Upcoming'}
+              {currentEventStatus === 'live'
+                ? 'Active Now'
+                : currentEvent.expected
+                  ? 'Expected Next'
+                  : 'Upcoming'}
             </p>
             <h3 className="font-display text-2xl text-platinum mb-2">{currentEvent.name}</h3>
             <p className="text-gold mb-3">{currentEvent.reward}</p>
             {currentEvent.note && (
               <p className="text-sm text-platinum/65 mb-5">{currentEvent.note}</p>
             )}
-            <p className="text-xs text-platinum/40 mb-4">
-              {/* Maintenance: edit src/data/events.ts to update event details. */}
-              Edit <code className="font-mono text-platinum/60">src/data/events.ts</code> to
-              keep this section current.
-            </p>
             <CTAButton size="md" label="Claim Bonus Now →" trackingLabel="homepage-cta" />
           </div>
         </section>
