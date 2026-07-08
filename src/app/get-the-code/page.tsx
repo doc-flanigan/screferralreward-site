@@ -1,11 +1,54 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import CTAButton from '@/components/CTAButton';
 import ReferralCodeBox from '@/components/ReferralCodeBox';
 import SectionHeading from '@/components/SectionHeading';
+import StaticHero from '@/components/StaticHero';
 import { REFERRAL_CODE } from '@/data/referral';
 import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
 import { DiscordCTA } from '@/components/DiscordCTA';
+import { PageSources } from '@/components/PageSources';
+
+// FAQPage structured data — mirrors the visible "Quick answers" section.
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Where do I enter the Star Citizen referral code?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In the Referral Code field on the RSI signup form. Paste STAR-GCQJ-N6NC there and a "Referral code successfully applied" confirmation appears before you finish creating the account.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I add a referral code after creating my account?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Only within about 24 hours of account creation, via your account settings. After that window the code can no longer be applied, so enter it at signup if you can.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to buy anything to get the 50,000 UEC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. The bonus credits when you create a free RSI account with a referral code — no purchase required. Playing the game itself requires a Game Package or a Free Fly event, but the bonus is yours either way.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How much is the referral bonus?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '50,000 UEC — the persistent in-game currency, spendable at in-game shops on components, weapons, armor, and gear.'
+      }
+    }
+  ]
+};
 
 export const metadata: Metadata = {
   title: `Star Citizen Referral Code ${REFERRAL_CODE} — 50,000 UEC`,
@@ -14,7 +57,15 @@ export const metadata: Metadata = {
   alternates: { canonical: '/get-the-code' }
 };
 
-const STEPS = [
+type Step = {
+  n: string;
+  title: string;
+  body: string;
+  note: string;
+  shot?: { src: string; alt: string; caption: string };
+};
+
+const STEPS: Step[] = [
   {
     n: '1',
     title: 'Open the RSI signup page',
@@ -25,7 +76,12 @@ const STEPS = [
     n: '2',
     title: 'Confirm STAR-GCQJ-N6NC is in the field',
     body: 'On the signup form, scroll to the "Referral Code" field. The code STAR-GCQJ-N6NC should be pre-populated — if it is missing, paste it manually.',
-    note: 'The field is sometimes labelled "Recruitment Code" depending on the page version. Same field.'
+    note: 'The field is sometimes labelled "Recruitment Code" depending on the page version. Same field.',
+    shot: {
+      src: '/images/rsi-signup-referral-code-field.jpg',
+      alt: 'Star Citizen RSI signup form with the Referral Code field highlighted, showing code STAR-GCQJ-N6NC successfully applied.',
+      caption: 'The Referral Code field on the RSI signup page, with the code applied.'
+    }
   },
   {
     n: '3',
@@ -56,6 +112,10 @@ export default function GetTheCodePage() {
           { name: 'Get the Code', url: '/get-the-code' }
         ]}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="px-4 sm:px-6 pt-12 pb-12">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <p className="text-xs uppercase tracking-[0.3em] text-gold">
@@ -71,6 +131,15 @@ export default function GetTheCodePage() {
           <div className="pt-4">
             <ReferralCodeBox />
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 sm:px-6 pb-12">
+        <div className="max-w-5xl mx-auto">
+          <StaticHero
+            src="/images/hero/hero-17.jpg"
+            alt="An F8C Lightning fighter on a landing pad in a hazy Star Citizen city"
+          />
         </div>
       </section>
 
@@ -91,10 +160,20 @@ export default function GetTheCodePage() {
                   <div className="border-l-2 border-gold/40 pl-3 text-sm text-platinum/55 italic">
                     {s.note}
                   </div>
-                  {/* SCREENSHOT PLACEHOLDER: Add /public/images/get-the-code/step-{n}.jpg */}
-                  <div className="mt-4 aspect-[16/8] rounded-md border border-dashed border-white/10 bg-charcoal/60 flex items-center justify-center text-platinum/30 text-xs">
-                    Screenshot placeholder — step {s.n}
-                  </div>
+                  {s.shot && (
+                    <figure className="mt-4 overflow-hidden rounded-md border border-white/10">
+                      <Image
+                        src={s.shot.src}
+                        alt={s.shot.alt}
+                        width={1200}
+                        height={1000}
+                        className="h-auto w-full"
+                      />
+                      <figcaption className="bg-charcoal/60 px-3 py-2 text-xs text-platinum/50">
+                        {s.shot.caption}
+                      </figcaption>
+                    </figure>
+                  )}
                 </div>
               </div>
             </div>
@@ -147,11 +226,48 @@ export default function GetTheCodePage() {
         </div>
       </section>
 
+      <section className="px-4 sm:px-6 py-16">
+        <div className="max-w-3xl mx-auto">
+          <SectionHeading
+            eyebrow="Quick Answers"
+            title="Referral Code Questions"
+            subtitle="The short version of everything above."
+          />
+          <div className="space-y-4">
+            {faqJsonLd.mainEntity.map((q) => (
+              <div
+                key={q.name}
+                className="bg-charcoalMid border border-white/5 rounded-xl p-5 sm:p-6"
+              >
+                <h3 className="font-display text-lg text-platinum mb-2">{q.name}</h3>
+                <p className="text-sm text-platinum/70 leading-relaxed">
+                  {q.acceptedAnswer.text}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted mt-8">
+            Want the full walkthrough with screenshots?{' '}
+            <a
+              href="https://dayonecitizen.com/referral-code"
+              className="text-gold underline hover:text-goldDark"
+              target="_blank"
+              rel="noopener"
+            >
+              See the step-by-step referral guide on dayonecitizen.com
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
       <section className="px-4 sm:px-6 py-12 text-center">
         <Link href="/" className="text-sm text-gold hover:underline">
           ← Back to home
         </Link>
       </section>
+
+      <PageSources route="/get-the-code" />
     </main>
   );
 }

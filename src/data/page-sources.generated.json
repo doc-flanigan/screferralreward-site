@@ -36,6 +36,49 @@
         "sources": [
           "https://robertsspaceindustries.com/en/comm-link/transmission/21147-DefenseCon-2956-About"
         ]
+      },
+      {
+        "id": "freefly-event-based-not-always-on",
+        "claim": "Free Fly access is event-based, not always-on — CIG runs scheduled windows a few times per year (typically Invictus/DefenseCon in May and IAE in November); outside an event, playing requires a Game Package.",
+        "status": "verified",
+        "sources": [
+          "https://robertsspaceindustries.com/en/comm-link/transmission/21147-DefenseCon-2956-About",
+          "https://robertsspaceindustries.com/en/comm-link/transmission/20861-Intergalactic-Aerospace-Expo-2955-Free-Fly-And-Manufacturer-Schedule"
+        ]
+      },
+      {
+        "id": "referral-enlistment-bonus-50k-uec",
+        "claim": "New RSI accounts created with a referral code receive a 50,000 UEC enlistment bonus.",
+        "status": "verified",
+        "sources": [
+          "https://robertsspaceindustries.com/en/referral-program"
+        ]
+      }
+    ],
+    "/get-the-code": [
+      {
+        "id": "referral-bonus-no-purchase-required",
+        "claim": "Claiming the 50,000 UEC enlistment bonus requires no purchase — creating the free RSI account with a referral code is enough; the bonus stays on the account permanently.",
+        "status": "verified",
+        "sources": [
+          "https://robertsspaceindustries.com/en/referral-program"
+        ]
+      },
+      {
+        "id": "referral-code-24h-window",
+        "claim": "A referral code must be applied at account signup or within ~24 hours in account settings — it cannot be added after that window.",
+        "status": "verified",
+        "sources": [
+          "https://robertsspaceindustries.com/en/referral-program"
+        ]
+      },
+      {
+        "id": "referral-enlistment-bonus-50k-uec",
+        "claim": "New RSI accounts created with a referral code receive a 50,000 UEC enlistment bonus.",
+        "status": "verified",
+        "sources": [
+          "https://robertsspaceindustries.com/en/referral-program"
+        ]
       }
     ]
   }

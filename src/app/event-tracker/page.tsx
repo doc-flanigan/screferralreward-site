@@ -6,7 +6,39 @@ import EventHistoryTable from '@/components/EventHistoryTable';
 import SectionHeading from '@/components/SectionHeading';
 import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
 import { PageSources } from '@/components/PageSources';
-import { HUB_URL } from '@/data/referral';
+import StaticHero from '@/components/StaticHero';
+
+// FAQPage structured data — mirrors the visible "Quick answers" section.
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is the Star Citizen referral bonus available outside event windows?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. The standard 50,000 UEC referral bonus is permanent — any new RSI account created with a referral code receives it, event or no event. Event windows only layer extra rewards on top.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'When do referral bonus events usually happen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'They tend to cluster around major Star Citizen events — Invictus Launch Week in May, the Intergalactic Aerospace Expo (IAE) in November, and anniversary promotions. Exact windows are announced on the official RSI site.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I try Star Citizen for free while I wait for a bonus window?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, during Free Fly events — limited windows several times a year when anyone can play with a free RSI account. Star Citizen is not free-to-play outside those events.'
+      }
+    }
+  ]
+};
 
 export const metadata: Metadata = {
   title: 'Star Citizen Referral Bonus Events — History & Upcoming',
@@ -23,6 +55,10 @@ export default function EventTrackerPage() {
           { name: 'Home', url: '/' },
           { name: 'Event Tracker', url: '/event-tracker' }
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <section className="px-4 sm:px-6 pt-12 pb-10">
@@ -44,6 +80,15 @@ export default function EventTrackerPage() {
         </div>
       </section>
 
+      <section className="px-4 sm:px-6 pb-10">
+        <div className="max-w-5xl mx-auto">
+          <StaticHero
+            src="/images/hero/hero-16.jpg"
+            alt="Two Star Citizen bombers flying above golden sunset clouds"
+          />
+        </div>
+      </section>
+
       <section className="px-4 sm:px-6 py-16 bg-charcoalMid/40 border-y border-white/5">
         <div className="max-w-5xl mx-auto">
           <SectionHeading
@@ -58,23 +103,46 @@ export default function EventTrackerPage() {
       <section className="px-4 sm:px-6 py-16">
         <div className="max-w-3xl mx-auto">
           <SectionHeading
-            eyebrow="Set A Reminder"
+            eyebrow="Watch The Calendar"
             title="Don&apos;t Miss The Next Bonus Window"
-            subtitle="The dayonecitizen.com network publishes a free new-citizen newsletter that flags upcoming free-fly weekends, IAE, and bonus UEC promos before they go live."
+            subtitle="Bonus windows track the big Star Citizen events — Invictus in May, IAE in November, and anniversary promotions in between."
           />
           <div className="bg-charcoalMid border border-gold/30 rounded-xl p-6 sm:p-8 text-center">
             <p className="text-platinum/80 mb-4">
-              Subscribe at the hub to get email reminders 48 hours before each known bonus
-              event window opens.
+              freeflyevent.com tracks the next free-trial and event window day by day —
+              the same events referral bonuses usually attach to.
             </p>
             <a
-              href={HUB_URL}
+              href="https://freeflyevent.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 rounded-md border border-gold text-gold hover:bg-gold hover:text-charcoal transition-colors font-bold"
             >
-              Visit dayonecitizen.com →
+              Check the event calendar →
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 sm:px-6 py-16 bg-charcoalMid/40 border-y border-white/5">
+        <div className="max-w-3xl mx-auto">
+          <SectionHeading
+            eyebrow="Quick Answers"
+            title="Event Questions"
+            subtitle="The short version."
+          />
+          <div className="space-y-4">
+            {faqJsonLd.mainEntity.map((q) => (
+              <div
+                key={q.name}
+                className="bg-charcoalMid border border-white/5 rounded-xl p-5 sm:p-6"
+              >
+                <h3 className="font-display text-lg text-platinum mb-2">{q.name}</h3>
+                <p className="text-sm text-platinum/70 leading-relaxed">
+                  {q.acceptedAnswer.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

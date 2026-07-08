@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import CTAButton from '@/components/CTAButton';
 import ReferralCodeBox from '@/components/ReferralCodeBox';
-import HeroCarousel from '@/components/HeroCarousel';
+import StaticHero from '@/components/StaticHero';
 import CountdownTimer from '@/components/CountdownTimer';
 import HowItWorks from '@/components/HowItWorks';
 import UecSpendGrid from '@/components/UecSpendGrid';
@@ -58,10 +58,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HERO CAROUSEL */}
+      {/* HERO IMAGE */}
       <section className="px-4 sm:px-6 pb-16">
         <div className="max-w-5xl mx-auto">
-          <HeroCarousel />
+          <StaticHero
+            src="/images/hero/hero-15.jpg"
+            alt="A formation of Star Citizen fighters flying over a lake at sunset"
+          />
         </div>
       </section>
 
