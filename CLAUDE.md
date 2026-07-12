@@ -144,9 +144,10 @@ event data went stale — /event-tracker 301s to freeflyevent.com, and this
 site now contains **no future dates anywhere**. `src/data/events.ts` remains
 only as an unused historical record. **Recurring maintenance: (1) the year
 in titles/copy ("2026") — refresh each January; (2) the "Verified working
-<date>" stamps on / and /get-the-code — re-check the code on the live RSI
-enlist page monthly and update the date (added 2026-07-11; DOC
-/referral-code keeps the canonical dated log).** Don't add content
+<date>" stamps on / and /get-the-code — run `npm run verify-referral` in
+the portfolio root monthly; it re-checks the code on the live RSI enlist
+page and bumps `src/data/verification.ts` automatically (added 2026-07-11,
+scripted 2026-07-12; DOC /referral-code keeps the canonical dated log).** Don't add content
 that can rot: no future dates, no countdowns, no "current event" cards, no
 event promises.
 
