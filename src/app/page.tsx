@@ -37,9 +37,18 @@ export default function Home() {
             <ReferralCodeBox />
           </div>
 
+          <p className="text-sm font-semibold text-gold">
+            Verified working July 11, 2026 — checked on the live RSI signup
+            page. Re-checked monthly.
+          </p>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <CTAButton label="Create Account & Claim Bonus" trackingLabel="homepage-cta" />
           </div>
+
+          <p className="text-xs text-platinum/60">
+            The button opens the RSI signup page with the code already filled in.
+          </p>
 
           <div className="mx-auto max-w-md mt-2 rounded-md border border-yellow-400/40 bg-yellow-400/5 px-4 py-3 text-sm text-yellow-200/90 flex items-start gap-2">
             <span aria-hidden>⚠️</span>

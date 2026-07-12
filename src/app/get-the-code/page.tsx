@@ -131,6 +131,13 @@ export default function GetTheCodePage() {
           <div className="pt-4">
             <ReferralCodeBox />
           </div>
+          <p className="text-sm font-semibold text-gold">
+            Verified working July 11, 2026 — checked on the live RSI signup
+            page. Re-checked monthly.
+          </p>
+          <p className="text-sm text-platinum/60">
+            The signup button pre-fills this code for you — no typing needed.
+          </p>
         </div>
       </section>
 

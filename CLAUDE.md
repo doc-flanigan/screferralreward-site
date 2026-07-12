@@ -142,8 +142,11 @@ PageSources; the real annotated RSI signup screenshot lives on /get-the-code).
 The event tracker was REMOVED entirely on 2026-07-08 after its hardcoded
 event data went stale — /event-tracker 301s to freeflyevent.com, and this
 site now contains **no future dates anywhere**. `src/data/events.ts` remains
-only as an unused historical record. **The only recurring maintenance is the
-year in titles/copy ("2026") — refresh each January.** Don't add content
+only as an unused historical record. **Recurring maintenance: (1) the year
+in titles/copy ("2026") — refresh each January; (2) the "Verified working
+<date>" stamps on / and /get-the-code — re-check the code on the live RSI
+enlist page monthly and update the date (added 2026-07-11; DOC
+/referral-code keeps the canonical dated log).** Don't add content
 that can rot: no future dates, no countdowns, no "current event" cards, no
 event promises.
 
