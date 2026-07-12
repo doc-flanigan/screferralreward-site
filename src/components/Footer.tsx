@@ -23,6 +23,10 @@ export default function Footer() {
           <p className="text-platinum/70 leading-relaxed">
             Affiliate disclosure: This site uses Star Citizen referral code STAR-GCQJ-N6NC. Referral code owners may receive an in-game bonus if you sign up. Your rewards are not affected.
           </p>
+          <p className="mt-3 text-platinum/70 leading-relaxed">
+            The code belongs to Doc_Flanigan, the real Star Citizen player who
+            runs this site — disclosed openly and verified monthly.
+          </p>
         </div>
         <div>
           <h3 className="font-display font-bold text-gold mb-3 uppercase tracking-widest text-xs">
@@ -44,7 +48,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-xs text-platinum/40 flex flex-col sm:flex-row justify-between gap-2">
-          <span>© {new Date().getFullYear()} screferralreward.com</span>
+          <span>© {new Date().getFullYear()} screferralreward.com — run by Doc_Flanigan</span>
           <span>o7 ✊ — fly safe, citizen.</span>
         </div>
       </div>

@@ -157,6 +157,10 @@ export default function GetTheCodePage() {
             Verified working {VERIFIED_DISPLAY} — checked on the live RSI
             signup page. Re-checked monthly.
           </p>
+          <p className="text-sm text-platinum/70">
+            This is <span className="text-gold">Doc_Flanigan&apos;s</span> code — a real
+            Star Citizen player who runs this site and puts his name on it.
+          </p>
           <p className="text-sm text-platinum/60">
             The signup button pre-fills this code for you — no typing needed.
           </p>

@@ -43,6 +43,11 @@ export default function Home() {
             signup page. Re-checked monthly.
           </p>
 
+          <p className="text-sm text-platinum/70">
+            This is <span className="text-gold">Doc_Flanigan&apos;s</span> code — a real
+            Star Citizen player who runs this site and puts his name on it.
+          </p>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <CTAButton label="Create Account & Claim Bonus" trackingLabel="homepage-cta" />
           </div>

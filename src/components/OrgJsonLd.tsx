@@ -8,8 +8,13 @@ export default function OrgJsonLd() {
     url: SITE_URL,
     description:
       'Star Citizen referral code site — get 50,000 UEC bonus with code STAR-GCQJ-N6NC.',
+    author: {
+      '@type': 'Person',
+      name: 'Doc_Flanigan',
+      url: 'https://dayonecitizen.com'
+    },
     publisher: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: 'Doc_Flanigan',
       url: 'https://dayonecitizen.com'
     }
