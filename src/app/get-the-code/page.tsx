@@ -104,6 +104,23 @@ const STEPS: Step[] = [
   }
 ];
 
+// HowTo structured data — derived directly from the visible STEPS array so
+// the schema can never drift from the rendered walkthrough.
+const howToJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: `How to Apply Star Citizen Referral Code ${REFERRAL_CODE}`,
+  description:
+    'Five-step walkthrough for applying a Star Citizen referral code at signup and receiving the 50,000 UEC bonus.',
+  totalTime: 'PT5M',
+  step: STEPS.map((s) => ({
+    '@type': 'HowToStep',
+    position: Number(s.n),
+    name: s.title,
+    text: s.body
+  }))
+};
+
 export default function GetTheCodePage() {
   return (
     <main>
@@ -116,6 +133,10 @@ export default function GetTheCodePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       <section className="px-4 sm:px-6 pt-12 pb-12">
         <div className="max-w-3xl mx-auto text-center space-y-6">
