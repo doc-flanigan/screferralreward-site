@@ -9,6 +9,7 @@ import { REFERRAL_CODE } from '@/data/referral';
 import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
 import { DiscordCTA } from '@/components/DiscordCTA';
 import { PageSources } from '@/components/PageSources';
+import { VERIFIED_DISPLAY } from '@/data/verification';
 
 // FAQPage structured data — mirrors the visible "Quick answers" section.
 const faqJsonLd = {
@@ -132,8 +133,8 @@ export default function GetTheCodePage() {
             <ReferralCodeBox />
           </div>
           <p className="text-sm font-semibold text-gold">
-            Verified working July 11, 2026 — checked on the live RSI signup
-            page. Re-checked monthly.
+            Verified working {VERIFIED_DISPLAY} — checked on the live RSI
+            signup page. Re-checked monthly.
           </p>
           <p className="text-sm text-platinum/60">
             The signup button pre-fills this code for you — no typing needed.

@@ -9,6 +9,7 @@ import BreadcrumbsJsonLd from '@/components/BreadcrumbsJsonLd';
 import FaqJsonLd from '@/components/FaqJsonLd';
 import OrgJsonLd from '@/components/OrgJsonLd';
 import { PageSources } from '@/components/PageSources';
+import { VERIFIED_DISPLAY } from '@/data/verification';
 
 export default function Home() {
 
@@ -38,8 +39,8 @@ export default function Home() {
           </div>
 
           <p className="text-sm font-semibold text-gold">
-            Verified working July 11, 2026 — checked on the live RSI signup
-            page. Re-checked monthly.
+            Verified working {VERIFIED_DISPLAY} — checked on the live RSI
+            signup page. Re-checked monthly.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
