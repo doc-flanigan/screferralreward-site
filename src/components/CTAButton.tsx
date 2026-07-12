@@ -44,12 +44,6 @@ export default function CTAButton({
             site: window.location.hostname,
           }),
         }).catch(() => {})
-        ;(window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'cta_impression', {
-          cta_label: trackingLabel ?? 'unknown',
-          referral_code: code,
-          page_path: window.location.pathname,
-          site: window.location.hostname,
-        })
       },
       { threshold: 0.5 }
     );
@@ -75,11 +69,6 @@ export default function CTAButton({
         site: window.location.hostname,
       }),
     }).catch(() => {})
-    ;(window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'referral_click', {
-      referral_code: code,
-      page_path: window.location.pathname,
-      site: window.location.hostname,
-    })
   }
 
   return (
