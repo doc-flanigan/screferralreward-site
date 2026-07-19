@@ -52,7 +52,7 @@ const faqJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: `Star Citizen Referral Code ${REFERRAL_CODE} — 50,000 UEC`,
+  title: `Referral Code ${REFERRAL_CODE} — 50,000 UEC`,
   description:
     'Step-by-step guide to applying Star Citizen referral code STAR-GCQJ-N6NC at signup. Includes the 24-hour rule, where to paste the code, and what happens next.',
   alternates: { canonical: '/get-the-code' }
