@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import CTAButton from '@/components/CTAButton';
 import ReferralCodeBox from '@/components/ReferralCodeBox';
 import StaticHero from '@/components/StaticHero';
@@ -85,6 +86,20 @@ export default function Home() {
             subtitle="The referral bonus is automatic — no support tickets, no waiting periods. Apply the code at signup and the credits land automatically when your account is created."
           />
           <HowItWorks />
+          {/* Annotated RSI signup screenshot — same asset as /get-the-code Step 2 */}
+          <figure className="mt-10 max-w-3xl mx-auto overflow-hidden rounded-md border border-white/10">
+            <Image
+              src="/images/rsi-signup-referral-code-field.jpg"
+              alt="Star Citizen RSI signup form with the Referral Code field highlighted, showing code STAR-GCQJ-N6NC successfully applied."
+              width={1200}
+              height={1000}
+              className="h-auto w-full"
+            />
+            <figcaption className="bg-charcoal/60 px-3 py-2 text-xs text-platinum/50">
+              The RSI signup page with the referral code applied — you&apos;ll see it
+              confirmed before you create the account.
+            </figcaption>
+          </figure>
           {/* SEO cross-link: dayonecitizen */}
           <p className="text-center text-sm text-muted mt-6">
             New to Star Citizen?{' '}
